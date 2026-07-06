@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>浙江全省产业带与外贸开发地图</title>
+  <meta name="description" content="浙江11个地市重点产业带、县域产业、外贸开发方向与电话开发切入点。" />
+  <style>
+    :root{--ink:#111827;--muted:#64748b;--line:#e5e7eb;--soft:#f8fafc;--brand:#10b981;--brand2:#0f766e}
+    body{margin:0;background:#fbfcfd;color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;background-image:radial-gradient(#e5e7eb .6px,transparent .6px);background-size:26px 26px}
+    .wrap{max-width:1440px;margin:0 auto;padding:46px 28px 80px}.eyebrow{display:flex;gap:12px;align-items:center;color:#059669;font-weight:900;font-size:12px;letter-spacing:.14em;text-transform:uppercase}.eyebrow:before{content:"";width:44px;height:2px;background:var(--brand)}h1{font-size:54px;line-height:1.06;margin:18px 0 16px;font-weight:950;letter-spacing:-.045em}.lead{font-size:18px;color:var(--muted);max-width:920px;line-height:1.8}.hero{background:linear-gradient(135deg,#fff,#f0fdf4);border:1px solid #dcfce7;border-radius:30px;box-shadow:0 20px 50px rgba(15,23,42,.08);padding:28px;margin:26px 0}.hero-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.stat{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:18px}.stat b{display:block;font-size:28px}.stat span{font-size:12px;color:#64748b;font-weight:800}.panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:16px;box-shadow:0 10px 30px rgba(15,23,42,.04);margin:24px 0}.nav{display:flex;flex-wrap:wrap;gap:10px}.btn{border:1px solid #e5e7eb;background:#fff;color:#475569;border-radius:12px;padding:9px 16px;font-weight:800;font-size:14px;cursor:pointer}.btn:hover{border-color:#10b981;color:#047857}.btn.active{background:#111827;color:#fff;border-color:#111827}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.card{background:#fff;border:1px solid #e5e7eb;border-radius:24px;box-shadow:0 8px 28px rgba(15,23,42,.05);overflow:hidden}.card-head{padding:22px 22px 16px;border-bottom:1px solid #f1f5f9;background:linear-gradient(135deg,#fff,#f8fafc)}.city{font-size:26px;font-weight:950;margin:0}.role{font-size:13px;color:#64748b;line-height:1.7;margin-top:8px}.body{padding:18px 22px 22px}.belt{border-top:1px solid #f1f5f9;padding:15px 0}.belt:first-child{border-top:0}.belt-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}.belt-title b{font-size:16px}.tag{font-size:11px;font-weight:900;color:#059669;background:#ecfdf5;padding:2px 8px;border-radius:6px;letter-spacing:.05em}.meta{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:10px}.meta b{color:var(--ink);font-weight:800}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}.chip{background:#f1f5f9;color:#475569;font-size:11px;padding:3px 8px;border-radius:6px;font-weight:700}.action{background:#f8fafc;border:1px solid #e2e8f0;padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;color:#0f766e}.action b{display:block;margin-bottom:2px;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#0d9488}.source{margin-top:60px;padding:24px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;font-size:13px;color:#64748b;line-height:1.7}.source b{color:var(--ink);font-weight:800}.fade{animation:fadeIn .5s ease-out}@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.grid{grid-template-columns:1fr}h1{font-size:38px}.wrap{padding:24px 16px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">Zhejiang industrial belt map</div>
+      <h1>浙江全省<span style="color:#10b981">产业带与产业</span>外贸开发地图</h1>
+      <p class="lead">覆盖浙江 11 个设区市，按“地市 → 重点县区/产业带 → 核心产品 → 外贸开发切入点”整理，适合阿里国际站客户开发、电销、产业带走访和标杆客户筛选。</p>
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="stat"><b>11</b><span>设区市全覆盖</span></div>
+          <div class="stat"><b>90+</b><span>重点产业带/县域产业方向</span></div>
+          <div class="stat"><b>40+</b><span>适合国际站重点开发类目</span></div>
+          <div class="stat"><b>4类</b><span>先进制造/消费品/外贸工厂/特色资源</span></div>
+        </div>
+      </section>
+    </header>
+    <section class="panel"><div id="nav" class="nav"></div></section>
+    <main id="cards" class="grid"></main>
+    <section class="source">
+      <b>资料口径：</b>结合浙江“415X”先进制造业集群、各地市公开产业资料、浙江跨境电商产业带资料与常见外贸产品带整理。此报告用于产业带开发和客户筛选，不替代工商注册、店铺运营数据和具体企业背调。
+    </section>
+  </div>
+<script>
+const DATA=[
+{city:'杭州',role:'数字经济、智能物联、生物医药、跨境电商服务与品牌出海中枢。',belts:[
+B('滨江/萧山/余杭：数字安防与智能物联','数字安防、摄像头、传感器、IoT设备、智能家居网关','S级','security camera, smart home, IoT device, NVR, sensor','开发硬件工厂和方案商，切入“海外安防渠道/智能家居品牌”。'),
+B('钱塘/临平：生物医药与医疗器械','医药研发、医疗器械、体外诊断、医用耗材','A级','medical device, IVD, diagnostic kit, medical consumables','适合资料型开发，重点看认证、临床应用、COA/MSDS。'),
+B('萧山/余杭：纺织服装与羽绒家纺','羽绒制品、家纺、窗帘布、女装、童装','A级','home textile, down jacket, bedding, curtain fabric','用款式、面料、快反和品牌 OEM 切入。'),
+B('临安/富阳：电线电缆与通信材料','电线电缆、光缆、通信配件、装饰纸、包装材料','A级','cable, optical fiber cable, communication accessories','适合标准件+认证开发，重点切工程商和渠道商。')]
+},
+{city:'宁波',role:'港口外贸、绿色石化、磁性材料、家电、汽配、文具与塑机重镇。',belts:[
+B('北仑/镇海：绿色石化与新材料','石化材料、塑料原料、工程塑料、化工新材料','A级','engineering plastic, chemical raw material, polymer material','适合专业买家，强调稳定供应、牌号、MSDS。'),
+B('鄞州/北仑/宁海：汽车零部件','汽车模具、底盘件、传感器、内外饰、冲压件','S级','auto parts, stamping parts, automotive mold','按车型/OE号开发，适合售后和配套双线。'),
+B('慈溪/余姚：小家电与塑料制品','饮水机、取暖器、风扇、厨房小电、注塑件','S级','home appliance, water dispenser, heater, plastic parts','以认证、爆款、套装、OEM 打样切入。'),
+B('宁海/象山：文具、模具、户外休闲','文具、办公用品、模具、户外用品、渔具','A级','stationery, office supplies, mold, outdoor products','适合季节性新品和商超渠道开发。'),
+B('宁波全域：港口供应链与跨境服务','外贸代理、仓储物流、供应链服务、海外仓','B级','logistics, sourcing, warehouse, supply chain','适合服务型客户与工贸一体企业配套。')]
+},
+{city:'温州',role:'民营制造强市，电气、鞋服、泵阀、眼镜、包装印刷和汽摩配优势明显。',belts:[
+B('乐清：低压电气/电工电器','断路器、接触器、继电器、配电箱、光伏电气','S级','circuit breaker, contactor, relay, distribution box','温州最适合国际站开发产业之一，重点打认证和型号。'),
+B('瑞安：汽摩配与包装机械','汽摩配、滤清器、制动件、包装机械、印刷机械','A级','auto parts, motorcycle parts, packaging machine','按车型、OE号、设备产能切入。'),
+B('瓯海/鹿城：鞋革与服装','男鞋、女鞋、童鞋、皮革、服装辅料','A级','shoes, leather shoes, kids shoes, garment accessories','用款式库、快反和市场码段切入。'),
+B('永嘉/龙湾：泵阀与流体设备','阀门、泵、管件、执行器、流体控制','S级','industrial valve, pump, actuator, pipe fittings','适合工程客户 and 经销商，强调材质、标准、压力等级。'),
+B('平阳/苍南/龙港：包装印刷与礼品','无纺布袋、纸袋、标签、包装盒、礼品包装','A级','non woven bag, paper bag, label, packaging box','以环保材料、印刷定制 and 低 MOQ 切入。'),
+B('瓯海/瑞安：眼镜与光学配件','眼镜架、太阳镜、老花镜、镜片配件','A级','sunglasses, optical frames, reading glasses','按人群/场景分系列，适合 OEM/ODM。')]
+},
+{city:'嘉兴',role:'长三角一体化制造腹地，服装、家纺、箱包、集成装饰、新能源 and 紧固件突出。',belts:[
+B('海宁：皮革、家纺、经编、太阳能','皮革服装、家纺面料、经编布、太阳能热水器','A级','leather garment, warp knitting fabric, home textile, solar water heater','适合面料、服装、家居 and 新能源消费品开发。'),
+B('桐乡/濮院：羊毛衫与针织服装','羊毛衫、针织衫、围巾、针织配饰','A级','sweater, knitwear, scarf, wool sweater','季节款强，适合欧美/日韩服装买家。'),
+B('平湖：箱包与童车','拉杆箱、背包、旅行包、童车、婴童用品','S级','luggage, backpack, stroller, baby products','外贸适配强，适合商超、电商 and 品牌 OEM。'),
+B('嘉善/海盐：紧固件、木业、集成装饰','螺丝螺母、紧固件、胶合板、集成吊顶、墙板','A级','fastener, screw, plywood, ceiling panel','标准件 and 建材类，适合规格表 and 工程渠道开发。'),
+B('嘉兴港区/海宁：新能源与光伏配套','光伏组件、逆变器配件、储能配件、电池材料','A级','solar module, energy storage, PV accessories','认证 and 项目案例是关键。')]
+},
+{city:'湖州',role:'绿色智造与童装家居重镇，电梯、木地板、童装、椅业、新能源材料突出。',belts:[
+B('南浔：木地板与家居建材','木地板、复合地板、整木家居、装饰材料','A级','wood flooring, SPC flooring, engineered flooring','适合建材渠道 and 工程商，强调环保等级 and 安装案例。'),
+B('织里：童装产业带','童装、校服、婴童服饰、儿童配饰','A级','kids clothing, baby clothes, school uniform','款式快反、低 MOQ、直播/跨境电商适配。'),
+B('安吉：椅业与竹木制品','办公椅、电竞椅、休闲椅、竹制家居','S级','office chair, gaming chair, bamboo products','国际站强类目，打人体工学、认证 and 场景图。'),
+B('德清/长兴：电梯、新能源电池材料','电梯部件、锂电材料、储能配套、新材料','A级','elevator parts, lithium battery material, energy storage','适合专业渠道 and 工程客户。'),
+B('湖州全域：绿色纺织与环保设备','纺织面料、印染环保、过滤设备、污水处理','B级','textile fabric, environmental equipment, wastewater treatment','适合环保设备 and 面料供应链开发。')]
+},
+{city:'绍兴',role:'中国纺织核心区，面料、化纤、袜业、厨具、电机、黄酒与医药并重。',belts:[
+B('柯桥：全球纺织面料中心','化纤面料、针织面料、印花布、窗帘布、功能面料','S级','fabric, textile, polyester fabric, curtain fabric, printed fabric','浙江最核心外贸产业带之一，按面料用途 and 成分打关键词。'),
+B('诸暨：袜业、珍珠、铜加工','袜子、丝袜、运动袜、淡水珍珠、铜管件','S级','socks, sports socks, pearl jewelry, copper fittings','袜业适合跨境爆款，珍珠适合饰品买家。'),
+B('嵊州：厨具、电机、领带服饰','集成灶、厨电、小电机、领带、服饰配件','A级','kitchen appliance, integrated stove, electric motor, tie','厨电 and 电机适合认证+工厂实力打法。'),
+B('上虞：伞业、照明、化妆品包装','雨伞、户外伞、LED照明、化妆品包材','A级','umbrella, LED lighting, cosmetic packaging','伞业 and 包材适合 OEM/ODM 与商超开发。'),
+B('新昌/绍兴滨海：医药、轴承、装备','医药原料、轴承、制冷配件、高端装备','A级','bearing, pharma intermediate, refrigeration parts','专业买家，靠技术参数 and 稳定供应。')]
+},
+{city:'金华',role:'义乌小商品、永康五金、东阳木雕、浦江水晶、兰溪纺织等多产业带叠加。',belts:[
+B('义乌：小商品与跨境电商供应链','饰品、玩具、日用百货、节庆用品、宠物用品','S级','jewelry, toys, daily goods, party supplies, pet products','适合铺货、爆品、低 MOQ、多 SKU 采购商。'),
+B('永康：五金工具、门业、杯壶、健身器材','电动工具、保温杯、防盗门、滑板车、健身器材','S级','power tools, vacuum flask, security door, fitness equipment','浙江外贸强带，适合品牌代工 and 商超渠道。'),
+B('东阳：木雕、红木家具、影视服装道具','木雕工艺、红木家具、影视道具、家居软装','B级','wood carving, mahogany furniture, home decor','高客单价，适合定制 and 文化工艺品买家。'),
+B('浦江：水晶、挂锁、绗缝家纺','水晶工艺、锁具、绗缝被、家纺用品','A级','crystal crafts, padlock, quilt, home textile','礼品 and 家纺都适合跨境场景化。'),
+B('兰溪/武义：纺织、户外休闲、五金','毛巾、纺织面料、帐篷、休闲用品、五金工具','A级','towel, textile, tent, outdoor leisure, hardware tools','适合商超、户外 and 酒店用品渠道。')]
+},
+{city:'衢州',role:'四省边际制造与材料基地，氟硅新材料、特种纸、消防器材、门业、农产品加工突出。',belts:[
+B('衢州智造新城：氟硅新材料与化工','氟化工、硅材料、新能源材料、精细化工','A级','fluorochemical, silicone material, fine chemical','专业资料 and 合规文件驱动。'),
+B('龙游：特种纸与造纸装备','特种纸、装饰纸、包装纸、纸加工设备','A级','specialty paper, decorative paper, packaging paper','适合包装、建材、印刷客户。'),
+B('江山：门业、消防器材、木制品','防火门、钢木门、消防器材、木制家居','A级','fire door, steel door, fire equipment, wooden products','工程渠道强，强调认证 and 项目案例。'),
+B('开化/常山：农产品加工与轴承配套','茶叶、山茶油、食用菌、轴承/机械配套','B级','tea, camellia oil, bearing parts, mushroom','农产品适合品牌化，机械配套适合专业开发。')]
+},
+{city:'舟山',role:'海洋经济核心，船舶修造、海工装备、水产加工、港口物流 and 海洋新材料突出。',belts:[
+B('定海/普陀：船舶修造与海工装备','船舶维修、船用配件、海工装备、甲板机械','A级','ship repair, marine equipment, deck machinery, marine parts','适合工程客户 and 船舶服务商. '),
+B('舟山群岛新区：水产加工与冷链','水产食品、冻品、鱼粉、海产品加工、冷链物流','A级','seafood, frozen fish, fish meal, cold chain','食品合规、冷链 and 稳定供应是关键。'),
+B('岱山/嵊泗：石化配套与海洋新材料','石化配套、海洋涂料、防腐材料、港口设备','B级','marine coating, anti corrosion material, port equipment','适合项目型开发。')]
+},
+{city:'台州',role:'民营制造强市，水泵、电机、模具、汽配、阀门、户外家具、眼镜、滤布、灯饰等产业密集。',belts:[
+B('温岭：水泵、电机、鞋业、数控工具','水泵、电机、空压机、鞋业、数控刀具','S级','water pump, electric motor, shoes, CNC tools','国际站开发重点城市，参数 and 型号要细。'),
+B('黄岩：模具与塑料制品','注塑模具、塑料日用品、工艺礼品、电动车配套','S级','plastic mold, plastic household products, crafts','黄岩模具必须细分类目打词。'),
+B('路桥：汽摩配、卫浴五金、清洁用品','汽摩配、角阀、水嘴、清洁工具、再生机械','A级','motorcycle parts, sanitary hardware, cleaning tools','适合标准件 and 渠道客户。'),
+B('临海：户外家具、眼镜、灯饰、汽车管路','户外伞、凉亭、眼镜、LED灯串、硅胶管','S级','outdoor furniture, sunglasses, LED string lights, silicone hose','场景图 and 认证很关键。'),
+B('玉环：阀门水暖与汽配底盘件','阀门、管件、减震器、控制臂、家具五金','S级','brass valve, plumbing fittings, shock absorber','玉环适合工程 and 售后市场。'),
+B('天台/三门/仙居：滤布、胶带、户外服、工艺礼品','滤布、传动带、冲锋衣、工艺礼品、医药化工','A级','filter cloth, rubber belt, outdoor jacket, wooden crafts','县域特色强，适合垂直开发。')]
+},
+{city:'丽水',role:'生态工业与特色资源城市，阀门、竹木制品、文具、刀剪、食用菌、中医药资源明显。',belts:[
+B('龙泉：青瓷宝剑、汽车空调配件','青瓷、宝剑、汽车空调零部件、工艺品','B级','ceramic crafts, sword crafts, auto AC parts','工艺品适合文化礼品，汽配适合专业渠道。'),
+B('青田：石雕、侨乡贸易、鞋服配套','石雕工艺、鞋服、侨贸商品、进口贸易','B级','stone carving, shoes, garments','高定工艺品 and 侨商渠道有特色。'),
+B('缙云：锯床、带锯条、厨具、户外用品','锯床、带锯条、厨具、烧烤炉、户外用品','A级','band saw machine, saw blade, kitchenware, BBQ grill','机械+户外用品适合国际站开发。'),
+B('遂昌/松阳/庆元：竹木、食用菌、茶叶','竹木制品、食用菌、茶叶、木制家居','B级','bamboo products, mushroom, tea, wooden homeware','农林产品适合品牌化 and 礼品化。'),
+B('莲都/云和：玩具、木制品、文教用品','木制玩具、益智玩具、文教用品、童品','A级','wooden toys, educational toys, kids products','适合欧美早教、礼品 and 电商渠道。')]
+}
+];
+function B(name,products,level,keywords,action){return{name,products,level,keywords,action}}
+let current='全部';
+function renderNav(){const nav=document.getElementById('nav'); nav.innerHTML=''; ['全部',...DATA.map(d=>d.city)].forEach(c=>{const b=document.createElement('button'); b.className='btn '+(c===current?'active':''); b.textContent=c; b.onclick=()=>{current=c; render()}; nav.appendChild(b);});}
+function render(){renderNav(); const root=document.getElementById('cards'); root.innerHTML=''; DATA.forEach(city=>{if(current!=='全部'&&city.city!==current)return; const card=document.createElement('section'); card.className='card fade'; card.innerHTML=`<div class="card-head"><h2 class="city">${city.city}</h2><p class="role">${city.role}</p></div><div class="body">${city.belts.map(b=>`<div class="belt"><div class="belt-title"><b>${b.name}</b><span class="tag">${b.level}</span></div><div class="meta"><b>核心产业：</b>${b.products}</div><div class="chips">${b.keywords.split(',').map(k=>`<span class="chip">${k.trim()}</span>`).join('')}</div><div class="action"><b>开发切入：</b>${b.action}</div></div>`).join('')}</div>`; root.appendChild(card);});}
+window.onload=render;
+</script>
+</body>
+</html>
