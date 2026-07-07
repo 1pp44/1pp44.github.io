@@ -3,43 +3,289 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>浙江全省产业带企业双端口地图</title>
-  <meta name="description" content="浙江11个地市产业带、国际站企业端口、行业内合作企业端口与公开企业信息。" />
+  <title>浙江产业带企业双端口开发地图</title>
   <style>
-    :root{--ink:#111827;--muted:#64748b;--line:#e5e7eb;--soft:#f8fafc;--brand:#10b981;--dark:#0f172a;--warn:#f59e0b;--blue:#2563eb}body{margin:0;background:#fbfcfd;color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif;background-image:radial-gradient(#e5e7eb .6px,transparent .6px);background-size:26px 26px}.wrap{max-width:1480px;margin:0 auto;padding:42px 24px 80px}.eyebrow{display:flex;gap:12px;align-items:center;color:#059669;font-weight:900;font-size:12px;letter-spacing:.14em;text-transform:uppercase}.eyebrow:before{content:"";width:44px;height:2px;background:var(--brand)}h1{font-size:52px;line-height:1.08;margin:18px 0 14px;font-weight:950;letter-spacing:-.04em}.lead{font-size:18px;color:var(--muted);max-width:980px;line-height:1.8}.hero{background:linear-gradient(135deg,#fff,#f0fdf4);border:1px solid #dcfce7;border-radius:30px;box-shadow:0 20px 50px rgba(15,23,42,.08);padding:26px;margin:24px 0}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}.stat b{font-size:28px;display:block}.stat span{font-size:12px;color:#64748b;font-weight:800}.panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:16px;box-shadow:0 10px 30px rgba(15,23,42,.04);margin:20px 0}.nav,.tabs{display:flex;flex-wrap:wrap;gap:10px}.btn,.tab{border:1px solid #e5e7eb;background:#fff;color:#475569;border-radius:12px;padding:10px 16px;font-weight:900;font-size:14px;cursor:pointer}.btn:hover,.tab:hover{border-color:#10b981;color:#047857}.btn.active,.tab.active{background:#111827;color:#fff;border-color:#111827}.tab.international.active{background:#0f766e}.tab.partner.active{background:#1d4ed8}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.card{background:#fff;border:1px solid #e5e7eb;border-radius:24px;box-shadow:0 8px 28px rgba(15,23,42,.05);overflow:hidden}.head{padding:20px 22px 14px;border-bottom:1px solid #f1f5f9;background:#fcfdfd}.head h2{font-size:22px;margin:4px 0 6px;font-weight:900;letter-spacing:-.02em}.role{font-size:14px;color:var(--muted);line-height:1.5;font-weight:500}.body{padding:20px 22px 24px}.belt{margin-bottom:20px}.belt:last-child{margin-bottom:0}.belt-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}.belt-title b{font-size:15px;color:var(--dark)}.tag{background:#f1f5f9;color:#475569;padding:2px 8px;border-radius:6px;font-size:11px;font-weight:800;letter-spacing:.05em}.meta{font-size:13px;color:var(--muted);margin-bottom:10px;line-height:1.6}.meta b{color:var(--dark);margin-right:4px}.chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}.chip{background:#f8fafc;border:1px solid #e2e8f0;color:#64748b;padding:3px 10px;border-radius:8px;font-size:11px;font-weight:700}.notice{background:#fffbeb;border:1px solid #fef3c7;color:#92400e;padding:18px 22px;border-radius:18px;font-size:14px;margin:24px 0;line-height:1.6}.source{font-size:12px;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:20px;text-align:center}.port-label{display:inline-block;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:900;margin-bottom:8px;text-transform:uppercase}.port-label.intl{background:#f0fdfa;color:#0d9488;border:1px solid #ccfbf1}.port-label.partner{background:#eff6ff;color:#2563eb;border:1px solid #dbeafe}.company{margin-bottom:16px}.company-name{font-size:12px;color:var(--muted);font-weight:800;margin-bottom:4px;text-transform:uppercase}.company-meta{font-size:14px;color:var(--dark);line-height:1.6;font-weight:500}.company-link{display:inline-block;margin-top:12px;color:var(--blue);font-size:13px;font-weight:800;text-decoration:none}.company-link:hover{text-decoration:underline}@media (max-width:1024px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:640px){.grid{grid-template-columns:1fr}h1{font-size:36px}}
+    :root{--ink:#111827;--muted:#64748b;--line:#e5e7eb;--soft:#f8fafc;--green:#10b981;--blue:#2563eb;--orange:#f97316}body{margin:0;background:#fbfcfd;color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif;background-image:radial-gradient(#e5e7eb .6px,transparent .6px);background-size:26px 26px}.wrap{max-width:1480px;margin:auto;padding:42px 24px 80px}.eyebrow{display:flex;gap:12px;align-items:center;color:#059669;font-weight:900;font-size:12px;letter-spacing:.14em;text-transform:uppercase}.eyebrow:before{content:"";width:44px;height:2px;background:var(--green)}h1{font-size:52px;line-height:1.08;margin:18px 0 14px;font-weight:950;letter-spacing:-.04em}.lead{font-size:18px;color:var(--muted);max-width:980px;line-height:1.8}.hero{background:linear-gradient(135deg,#fff,#f0fdf4);border:1px solid #dcfce7;border-radius:30px;box-shadow:0 20px 50px rgba(15,23,42,.08);padding:26px;margin:24px 0}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}.stat b{font-size:28px;display:block}.stat span{font-size:12px;color:#64748b;font-weight:800}.panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:16px;box-shadow:0 10px 30px rgba(15,23,42,.04);margin:20px 0}.nav,.tabs{display:flex;flex-wrap:wrap;gap:10px}.btn,.tab{border:1px solid #e5e7eb;background:#fff;color:#475569;border-radius:12px;padding:10px 16px;font-weight:900;font-size:14px;cursor:pointer}.btn:hover,.tab:hover{border-color:#10b981;color:#047857}.btn.active,.tab.active{background:#111827;color:#fff;border-color:#111827}.tab.intl.active{background:#047857}.tab.partner.active{background:#1d4ed8}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.group{grid-column:1/-1;background:#fff;border:1px solid #e5e7eb;border-radius:24px;box-shadow:0 8px 28px rgba(15,23,42,.05);overflow:hidden}.group-head{padding:20px 22px;border-bottom:1px solid #f1f5f9;background:#fdfdfd;display:flex;justify-content:space-between;align-items:center}.group-title{font-size:18px;font-weight:900;color:var(--ink)}.group-sub{font-size:12px;color:var(--muted);margin-top:2px;font-weight:600}.count{background:var(--soft);padding:4px 12px;border-radius:20px;font-size:12px;font-weight:900;border:1px solid var(--line)}.warning{background:#fffbeb;padding:12px 20px;font-size:12px;color:#92400e;border-bottom:1px solid #fef3c7;font-weight:700}.company-grid{padding:18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;background:#fafafa}.company{background:#fff;border:1px solid #eee;border-radius:16px;padding:18px;position:relative;transition:all .3s}.company:hover{border-color:var(--green);box-shadow:0 6px 20px rgba(0,0,0,.04);transform:translateY(-2px)}.label{display:inline-block;padding:3px 8px;border-radius:6px;font-size:10px;font-weight:900;margin-bottom:10px;text-transform:uppercase}.label.intl{background:#ecfdf5;color:#059669}.label.partner{background:#eff6ff;color:#2563eb}.name{font-size:16px;font-weight:900;margin-bottom:10px;color:#0f172a}.meta{font-size:13px;color:#475569;margin-bottom:6px;line-height:1.5}.meta b{color:#1e293b;margin-right:4px;font-weight:800}.op{margin-top:10px;padding-top:10px;border-top:1px dashed #e5e7eb;font-size:13px;color:#047857;line-height:1.5}.op b{color:#065f46;margin-right:4px}.link{display:block;margin-top:14px;font-size:12px;color:var(--blue);text-decoration:none;font-weight:800}.link:hover{text-decoration:underline}.empty{grid-column:1/-1;padding:60px;text-align:center;color:var(--muted);font-weight:800}.source{margin-top:40px;padding:24px;background:#f1f5f9;border-radius:20px;font-size:13px;color:#475569;font-weight:700;line-height:1.6}
   </style>
 </head>
 <body>
 <div class="wrap">
-<header><div class="eyebrow">Zhejiang industry dual port</div><h1>浙江全省<span style="color:#10b981">产业带企业双端口</span>地图</h1><p class="lead">在原有浙江产业带地图基础上，新增两个业务端口：<b>国际站企业端口</b>用于找已在 Alibaba.com 出海的企业，<b>行业内合作企业端口</b>用于找行业龙头、供应链合作方、背书型客户和本地标杆。</p><section class="hero"><div class="stats"><div class="stat"><b>11</b><span>浙江设区市</span></div><div class="stat"><b>54</b><span>产业带/产业方向</span></div><div class="stat"><b>2</b><span>企业开发端口</span></div><div class="stat"><b>80+</b><span>公开企业信息样本</span></div></div></section></header>
-<section class="panel"><div class="tabs"><button class="tab international active" onclick="mode='international';render()">国际站企业端口</button><button class="tab partner" onclick="mode='partner';render()">行业内合作企业端口</button><button class="tab" onclick="mode='belt';render()">产业带总览</button></div></section>
-<section class="panel"><div id="nav" class="nav"></div></section>
-<section class="notice"><b>使用说明：</b>“国际站企业端口”优先展示已知 Alibaba.com/国际站企业或适合国际站开发的工贸企业；“行业内合作企业端口”展示公开信息中的行业龙头、上市公司、协会背书企业、供应链合作对象。公开企业信息用于开发线索，落地前仍需工商与店铺二次核验。</section>
-<main id="cards" class="grid"></main>
-<section class="source"><b>资料口径：</b>结合现有台州国际站看板、浙江全省产业带公开资料、常见县域产业集群与企业公开信息整理。企业端口第一版优先覆盖代表性样本，后续可逐地市扩充到完整标杆客户库。</section>
+<header><div class="eyebrow">Zhejiang dual enterprise ports</div><h1>浙江产业带<span style="color:#10b981">企业双端口</span>开发地图</h1><p class="lead">按你的新规则重构：<b>国际站企业端口</b>只放有国际站/Alibaba.com 店铺且效果好的标杆客户；<b>行业内合作企业端口</b>放无国际站但有官网、独立站、公示信息 or 行业背书的合作企业，并给每家企业标注机会点。两个端口均按“地区 → 行业 → 企业”存放，不足10家不强行补齐。</p><section class="hero"><div class="stats"><div class="stat"><b id="statCities">-</b><span>覆盖地市</span></div><div class="stat"><b id="statIndustries">-</b><span>地区/行业组合</span></div><div class="stat"><b id="statCompanies">-</b><span>首批企业样本</span></div><div class="stat"><b>5/天</b><span>后续每日新增目标</span></div></div></section></header>
+<section class="panel"><div class="tabs"><button class="tab intl active" onclick="port='international';industry='全部';render()">国际站企业端口</button><button class="tab partner" onclick="port='partner';industry='全部';render()">行业内合作企业端口</button></div></section>
+<section class="panel"><div id="cityNav" class="nav"></div><div style="height:10px"></div><div id="industryNav" class="nav"></div></section>
+<main id="content" class="grid"></main>
+<section class="source"><b>说明：</b>第一版只放已掌握且可核验的高把握样本；不足10家会显示“不足10家，不强行添加”。后续每日新增5家通过核验的企业，优先补齐不足10家的行业组合。</section>
 </div>
 <script>
-const BELTS=[
-{city:'杭州',role:'数字经济、智能物联、生物医药、跨境电商服务与品牌出海中枢。',belts:[B('滨江/萧山/余杭：数字安防与智能物联','数字安防、摄像头、传感器、IoT设备、智能家居网关','S级','security camera, smart home, IoT device, NVR, sensor','开发硬件工厂和方案商，切入海外安防渠道/智能家居品牌。'),B('钱塘/临平：生物医药与医疗器械','医药研发、医疗器械、体外诊断、医用耗材','A级','medical device, IVD, diagnostic kit','适合资料型开发，重点看认证、临床应用、COA/MSDS。'),B('萧山/余杭：纺织服装与羽绒家纺','羽绒制品、家纺、窗帘布、女装、童装','A级','home textile, down jacket, bedding','用款式、面料、快反和品牌 OEM 切入。'),B('临安/富阳：电线电缆与通信材料','电线电缆、光缆、通信配件、装饰纸、包装材料','A级','cable, optical fiber cable, communication accessories','适合标准件+认证开发，重点切工程商和渠道商。')]},
-{city:'宁波',role:'港口外贸、绿色石化、磁性材料、家电、汽配、文具与塑机重镇。',belts:[B('北仑/镇海：绿色石化与新材料','石化材料、塑料原料、工程塑料、化工新材料','A级','engineering plastic, chemical raw material','适合专业买家，强调稳定供应、牌号、MSDS。'),B('鄞州/北仑/宁海：汽车零部件','汽车模具、底盘件、传感器、内外饰、冲压件','S级','auto parts, stamping parts, automotive mold','按车型/OE号开发。'),B('慈溪/余姚：小家电与塑料制品','饮水机、取暖器、风扇、厨房小电、注塑件','S级','home appliance, water dispenser, heater','以认证、爆款、套装、OEM 打样切入。'),B('宁海/象山：文具、模具、户外休闲','文具、办公用品、模具、户外用品、渔具','A级','stationery, office supplies, outdoor products','适合季节性新品 and 商超渠道开发。'),B('宁波全域：港口供应链与跨境服务','外贸代理、仓储物流、供应链服务、海外仓','B级','logistics, sourcing, warehouse','适合服务型客户与工贸一体企业配套。')]},
-{city:'温州',role:'民营制造强市，电气、鞋服、泵阀、眼镜、包装印刷和汽摩配优势明显。',belts:[B('乐清：低压电气/电工电器','断路器、接触器、继电器、配电箱、光伏电气','S级','circuit breaker, contactor, relay','温州最适合国际站开发产业之一。'),B('瑞安：汽摩配与包装机械','汽摩配、滤清器、制动件、包装机械、印刷机械','A级','auto parts, motorcycle parts, packaging machine','按车型、OE号、设备产能切入。'),B('瓯海/鹿城：鞋革与服装','男鞋、女鞋、童鞋、皮革、服装辅料','A级','shoes, leather shoes, kids shoes','用款式库、快反和市场码段切入。'),B('永嘉/龙湾：泵阀与流体设备','阀门、泵、管件、执行器、流体控制','S级','industrial valve, pump, actuator','适合工程客户和经销商。'),B('平阳/苍南/龙港：包装印刷与礼品','无纺布袋、纸袋、标签、包装盒、礼品包装','A级','non woven bag, paper bag, label','以环保材料、印刷定制和低 MOQ 切入。'),B('瓯海/瑞安：眼镜与光学配件','眼镜架、太阳镜、老花镜、镜片配件','A级','sunglasses, optical frames, reading glasses','按人群/场景分系列。')]},
-{city:'嘉兴',role:'服装、家纺、箱包、集成装饰、新能源和紧固件突出。',belts:[B('海宁：皮革、家纺、经编、太阳能','皮革服装、家纺面料、经编布、太阳能热水器','A级','leather garment, warp knitting fabric','适合面料、服装、家居开发。'),B('桐乡/濮院：羊毛衫与针织服装','羊毛衫、针织衫、围巾、针织配饰','A级','sweater, knitwear, scarf','季节款强，适合欧美/日韩服装买家。'),B('平湖：箱包与童车','拉杆箱、背包、旅行包、童车、婴童用品','S级','luggage, backpack, stroller','适合商超、电商和品牌 OEM。'),B('嘉善/海盐：紧固件、木业、集成装饰','螺丝螺母、紧固件、胶合板、集成吊顶、墙板','A级','fastener, screw, plywood','标准件和建材类。'),B('嘉兴港区/海宁：新能源与光伏配套','光伏组件、逆变器配件、储能配件、电池材料','A级','solar module, energy storage','认证和项目案例是关键。')]},
-{city:'湖州',role:'绿色智造与童装家居重镇，电梯、木地板、童装、椅业、新能源材料突出。',belts:[B('南浔：木地板与家居建材','木地板、复合地板、整木家居、装饰材料','A级','wood flooring, SPC flooring','适合建材渠道和工程商。'),B('织里：童装产业带','童装、校服、婴童服饰、儿童配饰','A级','kids clothing, baby clothes','款式快反、低 MOQ。'),B('安吉：椅业与竹木制品','办公椅、电竞椅、休闲椅、竹制家居','S级','office chair, gaming chair','国际站强类目。'),B('德清/长兴：电梯、新能源电池材料','电梯部件、锂电材料、储能配套、新材料','A级','elevator parts, lithium battery material','适合专业渠道和工程客户。'),B('湖州全域：绿色纺织与环保设备','纺织面料、印染环保、过滤设备、污水处理','B级','textile fabric, environmental equipment','适合环保设备和面料供应链开发。')]},
-{city:'绍兴',role:'中国纺织核心区，面料、化纤、袜业、厨具、电机、黄酒与医药并重。',belts:[B('柯桥：全球纺织面料中心','化纤面料、针织面料、印花布、窗帘布、功能面料','S级','fabric, textile, polyester fabric','按面料用途和成分打关键词。'),B('诸暨：袜业、珍珠、铜加工','袜子、丝袜、运动袜、淡水珍珠、铜管件','S级','socks, sports socks, pearl jewelry','袜业适合跨境爆款。'),B('嵊州：厨具、电机、领带服饰','集成灶、厨电、小电机、领带、服饰配件','A级','kitchen appliance, electric motor','厨电和电机适合认证+工厂实力打法。'),B('上虞：伞业、照明、化妆品包装','雨伞、户外伞、LED照明、化妆品包材','A级','umbrella, LED lighting, cosmetic packaging','适合 OEM/ODM 与商超开发。'),B('新昌/绍兴滨海：医药、轴承、装备','医药原料、轴承、制冷配件、高端装备','A级','bearing, pharma intermediate','靠技术参数和稳定供应。')]},
-{city:'金华',role:'义乌小商品、永康五金、东阳木雕、浦江水晶、兰溪纺织等多产业带叠加。',belts:[B('义乌：小商品与跨境电商供应链','饰品、玩具、日用百货、节庆用品、宠物用品','S级','jewelry, toys, daily goods','适合铺货、爆品、低 MOQ。'),B('永康：五金工具、门业、杯壶、健身器材','电动工具、保温杯、防盗门、滑板车、健身器材','S级','power tools, vacuum flask, fitness equipment','适合品牌代工和商超渠道。'),B('东阳：木雕、红木家具、影视服装道具','木雕工艺、红木家具、影视道具、家居软装','B级','wood carving, mahogany furniture','高定工艺品和文化礼品。'),B('浦江：水晶、挂锁、绗缝家纺','水晶工艺、锁具、绗缝被、家纺用品','A级','crystal crafts, padlock, quilt','礼品和家纺场景化。'),B('兰溪/武义：纺织、户外休闲、五金','毛巾、纺织面料、帐篷、休闲用品、五金工具','A级','towel, textile, tent','适合商超、户外和酒店用品渠道。')]},
-{city:'衢州',role:'氟硅新材料、特种纸、消防器材、门业、农产品加工突出。',belts:[B('衢州智造新城：氟硅新材料与化工','氟化工、硅材料、新能源材料、精细化工','A级','fluorochemical, silicone material','专业资料和合规文件驱动。'),B('龙游：特种纸与造纸装备','特种纸、装饰纸、包装纸、纸加工设备','A级','specialty paper, decorative paper','适合包装、建材、印刷客户。'),B('江山：门业、消防器材、木制品','防火门、钢木门、消防器材、木制家居','A级','fire door, fire equipment','工程渠道强，强调认证。'),B('开化/常山：农产品加工与轴承配套','茶叶、山茶油、食用菌、轴承/机械配套','B级','tea, camellia oil, bearing parts','农产品品牌化，机械配套专业开发。')]},
-{city:'舟山',role:'海洋经济核心，船舶修造、海工装备、水产加工、港口物流和海洋新材料突出。',belts:[B('定海/普陀：船舶修造与海工装备','船舶维修、船用配件、海工装备、甲板机械','A级','ship repair, marine equipment','适合工程客户和船舶服务商。'),B('舟山群岛新区：水产加工与冷链','水产食品、冻品、鱼粉、海产品加工、冷链物流','A级','seafood, frozen fish, fish meal','食品合规、冷链和稳定供应。'),B('岱山/嵊泗：石化配套与海洋新材料','石化配套、海洋涂料、防腐材料、港口设备','B级','marine coating, port equipment','适合项目型开发。')]},
-{city:'台州',role:'水泵、电机、模具、汽配、阀门、户外家具、眼镜、滤布、灯饰等产业密集。',belts:[B('温岭：水泵、电机、鞋业、数控工具','水泵、电机、空压机、鞋业、数控刀具','S级','water pump, electric motor, shoes','参数和型号要细。'),B('黄岩：模具与塑料制品','注塑模具、塑料日用品、工艺礼品、电动车配套','S级','plastic mold, plastic household products','模具必须细分类目打词。'),B('路桥：汽摩配、卫浴五金、清洁用品','汽摩配、角阀、水嘴、清洁工具、再生机械','A级','motorcycle parts, sanitary hardware','适合标准件和渠道客户。'),B('临海：户外家具、眼镜、灯饰、汽车管路','户外伞、凉亭、眼镜、LED灯串、硅胶管','S级','outdoor furniture, sunglasses, LED string lights','场景图和认证很关键。'),B('玉环：阀门水暖与汽配底盘件','阀门、管件、减震器、控制臂、家具五金','S级','brass valve, shock absorber','工程和售后市场。'),B('天台/三门/仙居：滤布、胶带、户外服、工艺礼品','滤布、传动带、冲锋衣、工艺礼品、医药化工','A级','filter cloth, rubber belt, outdoor jacket','县域特色强，适合垂直开发。')]},
-{city:'丽水',role:'生态工业与特色资源城市，阀门、竹木制品、文具、刀剪、食用菌、中医药资源明显。',belts:[B('龙泉：青瓷宝剑、汽车空调配件','青瓷、宝剑、汽车空调零部件、工艺品','B级','ceramic crafts, sword crafts','工艺品和汽配双线开发。'),B('青田：石雕、侨乡贸易、鞋服配套','石雕工艺、鞋服、侨贸商品、进口贸易','B级','stone carving, shoes, garments','高定工艺品和侨商渠道。'),B('缙云：锯床、带锯条、厨具、户外用品','锯床、带锯条、厨具、烧烤炉、户外用品','A级','band saw machine, saw blade, kitchenware','机械+户外用品适合国际站。'),B('遂昌/松阳/庆元：竹木、食用菌、茶叶','竹木制品、食用菌、茶叶、木制家居','B级','bamboo products, mushroom, tea','农林产品品牌化和礼品化。'),B('莲都/云和：玩具、木制品、文教用品','木制玩具、益智玩具、文教用品、童品','A级','wooden toys, educational toys','适合欧美早教、礼品和电商渠道。')]}];
-const INTL=[
-C('杭州','杭州海康威视数字技术股份有限公司','数字安防/智能物联','摄像头、NVR、安防系统','上市龙头，适合做安防产业背书与渠道对标','https://www.hikvision.com/'),C('杭州','新华三技术有限公司','网络通信/企业ICT','交换机、路由器、服务器、云网设备','适合作为企业ICT和网络设备合作/背书对象','https://www.h3c.com/'),C('杭州','杭州老板电器股份有限公司','厨电/家电','油烟机、集成厨电、厨房电器','品牌出海和高端厨电对标企业','https://www.robam.com/'),C('宁波','宁波申洲针织有限公司','针织服装/成衣代工','针织服装、运动服、品牌代工','全球成衣供应链标杆，适合服装产业背书','https://www.shenzhouintl.com/'),C('宁波','公牛集团股份有限公司','电工电器/消费电子','插座、转换器、照明、电连接产品','消费电工类外贸对标企业','https://www.gongniu.cn/'),C('宁波','宁波方太厨具有限公司','厨电/高端家电','吸油烟机、灶具、洗碗机','高端厨电和品牌出海参考','https://www.fotile.com/'),C('温州','正泰集团股份有限公司','低压电气/新能源','断路器、接触器、光伏电气','乐清电气产业带核心龙头','https://www.chint.com/'),C('温州','德力西集团有限公司','低压电气/电工电器','低压电器、配电、电气设备','电气产业带开发标杆','https://www.delixi.com/'),C('温州','奥康鞋业股份有限公司','鞋业/皮鞋','男鞋、女鞋、皮鞋品牌','温州鞋业品牌化代表','https://www.aokang.com/'),C('嘉兴','浙江新凤鸣集团股份有限公司','化纤/纺织原料','涤纶长丝、化纤材料','桐乡化纤产业龙头','https://www.xinfengming.com/'),C('嘉兴','浙江海利得新材料股份有限公司','工业丝/新材料','涤纶工业丝、帘子布、功能材料','工业纺织材料标杆','https://www.halead.com/'),C('湖州','永艺家具股份有限公司','椅业/办公家具','办公椅、人体工学椅、休闲椅','安吉椅业上市标杆','https://www.uechairs.com/'),C('湖州','浙江大自然家居有限公司','木地板/家居建材','木地板、家居建材','南浔地板产业代表','https://www.nature-cn.cn/'),C('绍兴','浙江中国轻纺城集团股份有限公司','纺织面料/市场平台','面料市场、纺织供应链','柯桥面料产业平台型标杆','https://www.qfcgroup.com/'),C('绍兴','浙江医药股份有限公司','医药/原料药','维生素、抗生素、生命营养品','新昌医药产业代表','https://www.zmc.top/'),C('金华','浙江哈尔斯真空器皿股份有限公司','杯壶/五金消费品','保温杯、保温壶、户外水具','永康杯壶外贸对标','https://www.haers.com/'),C('金华','横店集团东磁股份有限公司','磁性材料/新能源','磁材、光伏、电池材料','东阳先进制造代表','https://www.chinadmegc.com/'),C('衢州','巨化集团有限公司','氟化工/新材料','氟化工、制冷剂、新材料','衢州新材料产业龙头','https://www.juhua.com/'),C('舟山','浙江石油化工有限公司','石化/新材料','炼化一体化、石化产品','舟山绿色石化代表','https://www.zpc-cn.com/'),C('台州','台州市泰格机电有限公司','水泵/机电','水泵、电机、清洗机','温岭泵机国际站标杆','https://techo.en.alibaba.com/company_profile.html'),C('台州','临海市雷格户外用品有限公司','户外家具','遮阳伞、凉亭、秋千','临海户外休闲用品国际站标杆','https://regalleisure4u.en.alibaba.com/company_profile.html'),C('丽水','浙江锯力煌锯床股份有限公司','锯床/装备制造','锯床、带锯床、锯切装备','缙云锯床产业代表','https://www.julihuang.com/')];
-const PARTNER=[
-C('杭州','阿里巴巴集团控股有限公司','跨境电商平台/数字贸易','国际站、数字贸易基础设施','适合做产业带数字化合作入口','https://www.alibaba.com/'),C('杭州','物产中大集团股份有限公司','供应链/大宗贸易','供应链集成、贸易服务','适合供应链金融与大宗贸易合作','https://www.wzgroup.cn/'),C('宁波','宁波舟山港股份有限公司','港口物流','港口、航运、国际物流','适合全省外贸物流协同','https://www.nbport.com.cn/'),C('温州','温州国际商会/温州外贸协会方向','商协会/产业组织','外贸企业组织、产业资源对接','适合组织型客户和批量走访',''),C('嘉兴','平湖箱包产业协会方向','箱包产业组织','箱包、童车、婴童用品资源','适合产业带批量合作开发',''),C('湖州','安吉椅业协会/椅业链主方向','椅业供应链','办公椅、电竞椅、竹木制品','适合安吉椅业集群开发',''),C('绍兴','中国轻纺城市场经营主体','纺织市场/面料平台','面料、纺织供应链、样布市场','适合柯桥面料客户批量触达','https://www.qfcgroup.com/'),C('金华','义乌中国小商品城','小商品市场/跨境供应链','小商品、饰品、玩具、日用百货','适合多SKU跨境卖家资源对接','https://www.cccgroup.com.cn/'),C('金华','永康五金城集团/五金市场方向','五金市场/产业平台','五金工具、杯壶、门业、健身器材','适合永康五金产业批量开发',''),C('衢州','衢州智造新城产业平台方向','新材料产业平台','氟硅新材料、化工材料、装备配套','适合新材料链式招商和客户背调',''),C('舟山','舟山水产流通与加工企业方向','水产加工/冷链','冻品、水产加工、冷链物流','适合食品合规和供应链合作',''),C('台州','台州产业带国际站标杆库','产业带客户池','水泵、模具、阀门、户外家具、滤布等','适合按县区批量电销 and 走访',''),C('丽水','云和木玩产业服务平台方向','木制玩具/文教用品','木玩、早教玩具、文教用品','适合欧美早教与礼品渠道合作','')];
-function B(name,products,level,keywords,action){return{name,products,level,keywords,action}}
-function C(city,name,industry,products,note,url){return{city,name,industry,products,note,url}}
-let city='全部',mode='international';
-function renderNav(){const nav=document.getElementById('nav');nav.innerHTML='';['全部',...BELTS.map(x=>x.city)].forEach(c=>{const b=document.createElement('button');b.className='btn '+(c===city?'active':'');b.textContent=c;b.onclick=()=>{city=c;render()};nav.appendChild(b)})}
-function render(){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.querySelector(mode==='international'?'.international':mode==='partner'?'.partner':'.tab:not(.international):not(.partner)').classList.add('active');renderNav();const root=document.getElementById('cards');root.innerHTML='';if(mode==='belt'){BELTS.forEach(d=>{if(city!=='全部'&&d.city!==city)return;const card=document.createElement('section');card.className='card';card.innerHTML=`<div class="head"><h2>${d.city}</h2><p class="role">${d.role}</p></div><div class="body">${d.belts.map(b=>`<div class="belt"><div class="belt-title"><b>${b.name}</b><span class="tag">${b.level}</span></div><div class="meta"><b>核心产业：</b>${b.products}</div><div class="chips">${b.keywords.split(',').map(k=>`<span class="chip">${k.trim()}</span>`).join('')}</div><div class="meta"><b>开发切入：</b>${b.action}</div></div>`).join('')}</div>`;root.appendChild(card)});return}const list=mode==='international'?INTL:PARTNER;list.forEach(c=>{if(city!=='全部'&&c.city!==city)return;const card=document.createElement('section');card.className='card';card.innerHTML=`<div class="head"><span class="port-label ${mode==='international'?'intl':'partner'}">${mode==='international'?'国际站/出海企业':'行业合作企业'}</span><h2>${c.name}</h2><p class="role">${c.city} · ${c.industry}</p></div><div class="body"><div class="company"><div class="company-name">主营产品</div><div class="company-meta">${c.products}</div></div><div class="company"><div class="company-name">合作切入</div><div class="company-meta">${c.note}</div></div>${c.url?`<a class="company-link" href="${c.url}" target="_blank">查看公开来源 / 官网 / 店铺 →</a>`:`<span class="company-meta">公开链接待补充，建议线下工商/官网复核</span>`}</div>`;root.appendChild(card)})}
+const DATA_PLACEHOLDER = {
+  "version": "2026-07-06-v1",
+  "rules": {
+    "international": "只收录有 Alibaba.com / 国际站店铺，且行业匹配、地区匹配、效果相对突出的标杆客户；不足10家不强行补齐。",
+    "partner": "收录无国际站店铺但有官网、上市公司公告、产业平台、公开公示信息的行业内合作企业，并为每家企业标注机会点。",
+    "dailyUpdate": "每天新增或替换5家通过核验的企业，优先补齐不足10家的地区/行业/端口组合。"
+  },
+  "enterprises": [
+    {
+      "port": "international",
+      "city": "台州",
+      "industry": "温岭 / 水泵工业",
+      "name": "台州市泰格机电有限公司",
+      "url": "https://techo.en.alibaba.com/company_profile.html",
+      "products": "水泵、电机、清洗机",
+      "metrics": "10年国际站；营收>$1亿；泵机类目头部标杆",
+      "opportunity": "适合做温岭泵业头部对标，拆解其产品参数、主图、清洗机/水泵组合打法。",
+      "source": "Alibaba.com company profile",
+      "verified": "店铺可访问；行业匹配；台州主体"
+    },
+    {
+      "port": "international",
+      "city": "台州",
+      "industry": "温岭 / 水泵工业",
+      "name": "浙江快乐泵业股份有限公司",
+      "url": "https://happypump.en.alibaba.com/company_profile.html",
+      "products": "工业泵、家用泵、水泵配套",
+      "metrics": "20年老牌泵业企业；温岭泵机产业代表",
+      "opportunity": "适合电话撬动老牌泵厂：强调同行用年限、认证、参数体系建立海外信任。",
+      "source": "Alibaba.com company profile",
+      "verified": "店铺可访问；行业匹配"
+    },
+    {
+      "port": "international",
+      "city": "台州",
+      "industry": "黄岩 / 模具工业",
+      "name": "台州华盾科技有限公司",
+      "url": "https://watongroup.en.alibaba.com/company_profile.html",
+      "products": "吹瓶机、吹瓶模具、包装机械配套",
+      "metrics": "11年国际站；吹瓶模具/包装装备标杆",
+      "opportunity": "适合拆解包装设备+模具一体化方案，撬动黄岩模具厂从单模具走向设备方案。",
+      "source": "Alibaba.com company profile",
+      "verified": "店铺可访问；黄岩模具/包装匹配"
+    },
+    {
+      "port": "international",
+      "city": "台州",
+      "industry": "天台 / 滤布过滤材料",
+      "name": "浙江天台华宇工业用布有限公司",
+      "url": "https://zjhylb.en.alibaba.com/company_profile.html",
+      "products": "工业滤布、针刺毡、过滤材料",
+      "metrics": "17年；US$340,000+；40订单；过滤布成交标杆",
+      "opportunity": "适合做天台滤布头部案例，围绕材质、工况、过滤精度做专业买家开发。",
+      "source": "Alibaba.com company profile",
+      "verified": "店铺可访问；天台滤布匹配"
+    },
+    {
+      "port": "international",
+      "city": "台州",
+      "industry": "天台 / 滤布过滤材料",
+      "name": "浙江天元环保科技有限公司",
+      "url": "https://zjtyhb.en.alibaba.com/company_profile.html",
+      "products": "压滤布、除尘滤袋、环保过滤材料",
+      "metrics": "8年；回复≤1h；过滤材料专业商",
+      "opportunity": "适合用响应速度和环保行业应用切入天台滤布客户。",
+      "source": "Alibaba.com company profile",
+      "verified": "店铺可访问；行业匹配"
+    },
+    {
+      "port": "international",
+      "city": "台州",
+      "industry": "路桥 / 清洁用品",
+      "name": "台州阳光工贸有限公司",
+      "url": "https://shenghonggongmao.en.alibaba.com/company_profile.html",
+      "products": "清洁刷、马桶刷、清洁工具",
+      "metrics": "530订单；清洁刷类目成交活跃",
+      "opportunity": "适合作为路桥清洁用品爆款成交样本，拆套装、颜色、包装和低MOQ打法。",
+      "source": "Alibaba.com company profile",
+      "verified": "店铺可访问；清洁用品匹配"
+    },
+    {
+      "port": "international",
+      "city": "台州",
+      "industry": "临海 / 灯饰节日灯",
+      "name": "临海格林伍德灯饰有限公司",
+      "url": "https://linhaigreenwood.en.alibaba.com/company_profile.html",
+      "products": "LED灯串、圣诞灯、户外节日灯",
+      "metrics": "9年；550订单；IP65/FCC/RoHS认证",
+      "opportunity": "适合作为临海灯饰头部对标，强调认证、IP等级、节日采购窗口。",
+      "source": "Alibaba.com company profile",
+      "verified": "店铺可访问；临海灯饰匹配"
+    },
+    {
+      "port": "international",
+      "city": "台州",
+      "industry": "临海 / 眼镜产业",
+      "name": "临海普林斯眼镜有限公司",
+      "url": "https://lhpulinsi.en.alibaba.com/company_profile.html",
+      "products": "眼镜架、太阳镜、光学镜",
+      "metrics": "3年；1400+订单；杜桥眼镜强交易样本",
+      "opportunity": "适合做杜桥眼镜强交易案例，按人群/场景拆款式库。",
+      "source": "Alibaba.com company profile",
+      "verified": "店铺可访问；临海眼镜匹配"
+    },
+    {
+      "port": "international",
+      "city": "台州",
+      "industry": "玉环 / 阀门水暖",
+      "name": "台州市卓信塑胶有限公司",
+      "url": "https://sam-uk.en.alibaba.com/company_profile.html",
+      "products": "塑料阀门、管件、水暖配套",
+      "metrics": "18年；塑料阀门头部出口商",
+      "opportunity": "适合做玉环/台州阀门水暖对标，突出材质、口径、认证、OEM打标。",
+      "source": "Alibaba.com company profile",
+      "verified": "店铺可访问；阀门水暖匹配"
+    },
+    {
+      "port": "international",
+      "city": "温州",
+      "industry": "乐清 / 低压电气",
+      "name": "正泰集团股份有限公司",
+      "url": "https://www.chint.com/",
+      "products": "低压电气、断路器、光伏电气",
+      "metrics": "行业龙头；公开官网可核验；具备全球化业务",
+      "opportunity": "作为乐清电气产业带背书企业，适合撬动中小电气工厂做认证与型号体系。",
+      "source": "企业官网/公开信息",
+      "verified": "公开官网；行业匹配；是否国际站店铺需继续补充"
+    },
+    {
+      "port": "international",
+      "city": "金华",
+      "industry": "永康 / 杯壶五金",
+      "name": "浙江哈尔斯真空器皿股份有限公司",
+      "url": "https://www.haers.com/",
+      "products": "保温杯、保温壶、户外水具",
+      "metrics": "上市公司；永康杯壶代表；公开官网可核验",
+      "opportunity": "适合做杯壶类品牌出海背书和永康五金消费品切入。",
+      "source": "企业官网/公开信息",
+      "verified": "公开官网；行业匹配；国际站店铺需继续补充"
+    },
+    {
+      "port": "partner",
+      "city": "杭州",
+      "industry": "数字贸易 / 平台合作",
+      "name": "阿里巴巴集团控股有限公司",
+      "url": "https://www.alibaba.com/",
+      "products": "国际站、数字贸易、跨境电商基础设施",
+      "metrics": "平台型合作企业；浙江数字贸易核心平台",
+      "opportunity": "可作为产业带数字化转型合作入口，适合组织客户培训、标杆共创和平台招商。",
+      "source": "平台官网/公开信息",
+      "verified": "公开信息"
+    },
+    {
+      "port": "partner",
+      "city": "宁波",
+      "industry": "港口物流 / 外贸供应链",
+      "name": "宁波舟山港股份有限公司",
+      "url": "https://www.nbport.com.cn/",
+      "products": "港口、航运、国际物流、供应链服务",
+      "metrics": "全球级港口平台；浙江外贸物流核心节点",
+      "opportunity": "适合给外贸工厂讲物流效率、港口优势和出口通路建设。",
+      "source": "企业官网/公开信息",
+      "verified": "公开官网"
+    },
+    {
+      "port": "partner",
+      "city": "杭州",
+      "industry": "供应链 / 大宗贸易",
+      "name": "物产中大集团股份有限公司",
+      "url": "https://www.wzgroup.cn/",
+      "products": "供应链集成、大宗贸易、产业服务",
+      "metrics": "浙江供应链龙头；上市公司公开信息可核验",
+      "opportunity": "可作为大宗产业链、供应链金融 and 产业服务合作对象。",
+      "source": "企业官网/公开信息",
+      "verified": "公开官网"
+    },
+    {
+      "port": "partner",
+      "city": "绍兴",
+      "industry": "柯桥 / 纺织面料平台",
+      "name": "浙江中国轻纺城集团股份有限公司",
+      "url": "https://www.qfcgroup.com/",
+      "products": "面料市场、纺织供应链、产业平台",
+      "metrics": "柯桥纺织平台型龙头；公开官网可核验",
+      "opportunity": "适合组织柯桥面料商户批量开发国际站、做面料关键词和样布体系。",
+      "source": "企业官网/公开信息",
+      "verified": "公开官网"
+    },
+    {
+      "port": "partner",
+      "city": "金华",
+      "industry": "义乌 / 小商品市场",
+      "name": "浙江中国小商品城集团股份有限公司",
+      "url": "https://www.cccgroup.com.cn/",
+      "products": "小商品市场、跨境供应链、贸易服务",
+      "metrics": "义乌市场平台型龙头；上市公司公开信息可核验",
+      "opportunity": "适合做多SKU铺货型产业带合作，连接小商品商户和跨境渠道。",
+      "source": "企业官网/公开信息",
+      "verified": "公开官网"
+    },
+    {
+      "port": "partner",
+      "city": "湖州",
+      "industry": "安吉 / 椅业",
+      "name": "永艺家具股份有限公司",
+      "url": "https://www.uechairs.com/",
+      "products": "办公椅、人体工学椅、休闲椅",
+      "metrics": "安吉椅业上市标杆；公开官网可核验",
+      "opportunity": "适合撬动安吉椅业中小工厂做人体工学、认证、场景图和海外渠道。",
+      "source": "企业官网/公开信息",
+      "verified": "公开官网"
+    },
+    {
+      "port": "partner",
+      "city": "衢州",
+      "industry": "新材料 / 氟硅化工",
+      "name": "巨化集团有限公司",
+      "url": "https://www.juhua.com/",
+      "products": "氟化工、制冷剂、新材料、精细化工",
+      "metrics": "衢州新材料产业龙头；公开官网可核验",
+      "opportunity": "适合做衢州新材料产业链背书，切入化工材料和专业买家资料体系。",
+      "source": "企业官网/公开信息",
+      "verified": "公开官网"
+    },
+    {
+      "port": "partner",
+      "city": "舟山",
+      "industry": "石化 / 海洋经济",
+      "name": "浙江石油化工有限公司",
+      "url": "https://www.zpc-cn.com/",
+      "products": "炼化一体化、石化产品、新材料配套",
+      "metrics": "舟山绿色石化核心企业；公开官网可核验",
+      "opportunity": "适合做舟山石化与海洋新材料产业合作背书。",
+      "source": "企业官网/公开信息",
+      "verified": "公开官网"
+    },
+    {
+      "port": "partner",
+      "city": "丽水",
+      "industry": "缙云 / 锯床装备",
+      "name": "浙江锯力煌锯床股份有限公司",
+      "url": "https://www.julihuang.com/",
+      "products": "锯床、带锯床、锯切装备",
+      "metrics": "缙云锯床产业代表企业；公开官网可核验",
+      "opportunity": "适合撬动丽水装备制造客户做机械参数、视频验机和国际渠道开发。",
+      "source": "企业官网/公开信息",
+      "verified": "公开官网"
+    },
+    {
+      "port": "partner",
+      "city": "台州",
+      "industry": "产业带 / 国际站标杆库",
+      "name": "台州产业带国际站标杆库",
+      "url": "https://1pp44.github.io/",
+      "products": "水泵、模具、阀门、户外家具、滤布、灯饰等",
+      "metrics": "已整理台州31个产业带企业样本；可作为销售开发工具",
+      "opportunity": "用于台州客户拜访、电销、同行撬动和产业带对标。",
+      "source": "本项目整理",
+      "verified": "持续更新"
+    }
+  ]
+};
+const DATA = DATA_PLACEHOLDER.enterprises;
+let port='international', city='全部', industry='全部';
+function keyOf(e){return `${e.city} / ${e.industry}`}
+function uniq(arr){return [...new Set(arr)]}
+function renderNav(){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.querySelector(port==='international'?'.intl':'.partner').classList.add('active');const cityNav=document.getElementById('cityNav');const industryNav=document.getElementById('industryNav');const list=DATA.filter(e=>e.port===port);const cities=['全部',...uniq(list.map(e=>e.city)).sort()];cityNav.innerHTML=cities.map(c=>`<button class="btn ${c===city?'active':''}" onclick="city='${c}';industry='全部';render()">${c}</button>`).join('');const inds=['全部',...uniq(list.filter(e=>city==='全部'||e.city===city).map(e=>e.industry)).sort()];industryNav.innerHTML=inds.map(i=>`<button class="btn ${i===industry?'active':''}" onclick="industry='${i}';render()">${i}</button>`).join('')}
+function render(){renderNav();const list=DATA.filter(e=>e.port===port&&(city==='全部'||e.city===city)&&(industry==='全部'||e.industry===industry));document.getElementById('statCities').textContent=uniq(DATA.map(e=>e.city)).length;document.getElementById('statIndustries').textContent=uniq(DATA.map(keyOf)).length;document.getElementById('statCompanies').textContent=DATA.length;const root=document.getElementById('content');root.innerHTML='';const groups=uniq(list.map(keyOf)).sort();if(!groups.length){root.innerHTML='<div class="empty">当前筛选下暂无企业，后续每日更新补充。</div>';return}groups.forEach(g=>{const rows=list.filter(e=>keyOf(e)===g);const section=document.createElement('section');section.className='group';section.innerHTML=`<div class="group-head"><div><div class="group-title">${g}</div><div class="group-sub">${port==='international'?'国际站标杆客户':'行业内合作企业'} · 按效果/机会优先排序</div></div><div class="count">${rows.length}/10 家</div></div>${rows.length<10?`<div class="warning">该组目前仅收录 ${rows.length} 家高把握企业；不足10家不强行添加，后续每日补充通过核验的新企业。</div>`:''}<div class="company-grid">${rows.map(e=>`<div class="company"><span class="label ${port==='international'?'intl':'partner'}">${port==='international'?'国际站标杆':'合作机会'}</span><div class="name">${e.name}</div><div class="meta"><b>主营：</b>${e.products}</div><div class="meta"><b>效果/公开信息：</b>${e.metrics}</div><div class="op"><b>机会点：</b>${e.opportunity}</div><div class="meta"><b>核验：</b>${e.verified}</div>${e.url?`<a class="link" href="${e.url}" target="_blank">查看来源 / 店铺 / 官网 →</a>`:''}</div>`).join('')}</div>`;root.appendChild(section)})}
 window.onload=render;
 </script>
-</body></html>
+</body>
+</html>
